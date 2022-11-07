@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS - Simple Slideshow</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/slideshow.css">
+    <script src="/js/angular.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="slideshowContainer" ng-app="slideshowApp" ng-controller="slideshowController" slide-show-images slide-show-settings>
+        <div class="slideshowSingleImage">
+            <img src="{{slideshowImages[slideshowIndex]}}" />
+        </div>
+        <div class="slideShowButton"><img src="{{slideShowButton}}" ng-click="playOrPause()" /></div>
+        <div class="slideshowPrevious slideshowPrevNext">
+            <img src="images/previous.png" ng-click="previousImage()" />
+        </div>
+        <div class="slideshowNext slideshowPrevNext">
+            <img src="images/next.png" ng-click="nextImage()" />
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/slideShowApp.js"></script>
+    <script type="text/javascript" src="js/slideShowController.js"></script>
+    <script type="text/javascript" src="js/slideShowImages.js"></script>
+    <script type="text/javascript" src="js/slideShowSettings.js"></script>
+
+</body>
+</html>
